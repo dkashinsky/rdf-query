@@ -1,0 +1,32 @@
+{
+  "name": "rdf-query",
+  "private": true,
+  "version": "0.0.1",
+  "description": "parsing and querying knowldege base",
+  "main": "index.js",
+  "scripts": {
+    "start": "ts-node src/index.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dkashinsky/rdf-query.git"
+  },
+  "keywords": [
+    "rdf",
+    "sparql"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dkashinsky/rdf-query/issues"
+  },
+  "homepage": "https://github.com/dkashinsky/rdf-query#readme",
+  "dependencies": {
+    "ts-node": "^10.7.0"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.23",
+    "typescript": "^4.6.3"
+  }
+}
