@@ -1,0 +1,48 @@
+@prefix ind:<URN:inds:>.
+@prefix prop:<URN:props:>.
+@prefix class:<URN:classes>.
+@prefix rdfs:<http://www.w3.org/2000/01/rdf-schema#>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+
+ind:proc0 a class:Process;
+		rdfs:label "Predict";
+		rdf:isDefinedBy	"AmirHosseinBahrami";
+		prop:hasKPI	ind:kpi0;
+        	prop:hasKPI	ind:kpi1.
+
+ind:kpi0 prop:kpi ind:proc0;
+	a class:KPI;
+        rdfs:label "PredictionTime";
+        prop:hasInter ind:Interval1;
+        prop:hasInter ind:Interval3.
+
+ind:kpi1 prop:kpi ind:proc0;
+	a class:KPI;
+        rdfs:label "PressureSensor";
+        prop:hasInter ind:Interval2;
+        prop:hasInter ind:Interval3.
+
+ind:Interval1 a class:Interval;
+            prop:causes ind:alarm;
+            prop:hasMin "0";
+            prop:hasMax "30".
+
+ind:Interval2 a class:Interval;
+            prop:causes ind:alarm;
+            prop:hasMin "10";
+            prop:hasMax "30".
+
+ind:Interval3 a class:Interval;
+            prop:causes ind:warning;
+            prop:hasMin "30";
+            prop:hasMax "50".
+
+ind:proc01 prop:SubProcess ind:proc0;
+		rdfs:label "Vectorizing";
+        prop:hasResource ind:StorageSensor;
+        prop:hasResource ind:ColorSensor.
+
+ind:alarm a class:state.
+
+ind:warning a class:state.
