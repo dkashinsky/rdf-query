@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/dkashinsky/rdf-query#readme",
   "dependencies": {
+    "@comunica/query-sparql-rdfjs": "^2.0.6",
     "n3": "^1.16.0"
   },
   "devDependencies": {
